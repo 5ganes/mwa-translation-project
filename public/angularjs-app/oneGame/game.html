@@ -1,0 +1,12 @@
+<h2>
+    Game Detail of {{vm.game.title | uppercase}}
+    ( <span ng-repeat="star in vm.gameStars track by $index">&#9733</span> )
+</h2>
+<ul>
+    <li><strong>Year:</strong> {{vm.game.year}}</li>
+    <li><strong>Price:</strong> {{vm.game.price | currency: USD}}</li>
+    <li><strong>Publisher:</strong> {{vm.game.publisher.name}}</li>
+    <li><strong>Minimum Players:</strong> {{vm.game.minPlayers}}</li>
+    <li><strong>Maximum Players:</strong> {{vm.game.maxPlayers}}</li>
+    <li><strong>Minimum Age:</strong> {{vm.game.minAge}}</li>
+</ul>

@@ -1,0 +1,45 @@
+<div class="inner-page-title-bar">
+    <div>
+        <h3>{{pageTitle}}</h3>
+    </div>
+    <div></div>
+</div>
+<form class="col-sm-5" #addEditForm="ngForm" (ngSubmit)="onSubmit(addEditForm)">
+    <!-- {{ addEditForm.value | json }} -->
+
+    <div class="form-group">
+        <strong>Title:</strong> <input ngModel name="title" #title="ngModel" type="text" class="form-control"
+            placeholder="{{game.title}}" required>
+        <span class="alert-danger" *ngIf="title.touched && !title.valid">Title is required</span>
+    </div>
+
+    <div class="form-group">
+        <strong>Price:</strong> <input ngModel type="text" name="price" class="form-control"
+            placeholder="{{game.price}}">
+    </div>
+
+    <div class="form-group">
+        <strong>Players:</strong> <input ngModel type="text" name="players" class="form-control"
+            placeholder="{{game.players}}">
+    </div>
+
+    <div class="form-group">
+        <strong>Rate:</strong> <input ngModel type="text" name="rate" class="form-control" placeholder="{{game.rate}}">
+    </div>
+
+    <div class="form-group">
+        <strong>Designers:</strong> <input ngModel type="text" name="designers" class="form-control" placeholder="">
+    </div>
+
+    <div class="form-group">
+        <strong>Publisher:</strong><br>
+        ::: Name: <input ngModel type="text" name="publisherName" placeholder="{{game.publisher.name}}">
+        Country: <input ngModel type="text" name="publisherCountry" placeholder="{{game.publisher.country}}">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Save Game</button>
+        <a routerLink="/games" class="btn btn-warning">Back</a>
+    </div>
+
+</form>

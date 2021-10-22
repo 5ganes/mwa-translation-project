@@ -1,0 +1,56 @@
+<!-- <h3>{{title}}</h3><br>
+
+<div class="game-list">
+    <table class="table table-responsive border-2">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Year</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let game of games">
+            <td>{{game.title}}</td>
+            <td>{{game.price}}</td>
+            <td>{{game.year}}</td>
+            <td>
+                <a class="btn btn-success" [routerLink]="['/games', game._id]">Detail</a>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+<div class="inner-page-title-bar">
+    <div>
+        <h3>{{title}}</h3>
+    </div>
+    <div>
+        <a class="btn btn-success" [routerLink]="['/games/addeditgame']">Add Game</a>
+    </div>
+</div>
+
+<div class="game-list">
+    <table class="table table-responsive border-2">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Players</th>
+            <th>Rate</th>
+            <th>Designers</th>
+            <th>Publishers</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let game of games">
+            <td>{{game.title}}</td>
+            <td>{{game.price}}</td>
+            <td>{{game.players}}</td>
+            <td>{{game.rate}}</td>
+            <td><span style="box-shadow: none;" *ngFor="let designer of game.designers">{{designer}}, </span></td>
+            <td>{{game.publisher.name}}</td>
+            <td>
+                <a class="btn btn-success" [routerLink]="['/games', game._id]">Detail</a>
+                <a class="btn btn-success" [routerLink]="['/games/edit', game._id]">Edit</a>
+                <button class="btn btn-danger" (click)="deleteGame(game._id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

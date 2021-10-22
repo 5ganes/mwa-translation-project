@@ -1,0 +1,60 @@
+body{
+    margin: 0; padding: 0; font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0; padding: 0%;
+}
+header, footer{
+    padding: 1%; background-color: rgb(12, 166, 177); text-align: center;
+}
+footer{
+    background-color: white; height: 100%; bottom: 0; width: 100%;
+    padding: 0;
+}
+nav{
+    padding: 1%; background-color: #031d26;
+}
+nav ul{
+    margin: 2px; padding: 0; display: flex;
+}
+nav ul li{
+    list-style: none; border-right: 1px solid; padding: 0.2% 3%;
+}
+nav ul li:last-child{
+    border: none;
+}
+nav ul li a{
+    display: block; width: 100%; padding: 1%; text-decoration: none;
+}
+section{
+    padding: 1%;
+}
+.btn{
+    padding: 0rem .9rem !important;
+}
+.form-group{
+    padding: 1% 0;
+}
+.form-control{
+    padding: .2rem 0.75rem;
+}
+
+.welcome{
+    text-align: center; padding: 4% 4% 24% 4%; font-size: 30px;
+}
+
+.main-cntroller{
+    padding: 1%;
+}
+
+
+/* inner page css */
+.inner-page-title-bar{
+    display: flex; justify-content: space-between; padding: 1%;
+}
+.inner-page-title-bar div:first-child{
+    width: 50%;
+}
+.inner-page-title-bar div:last-child{
+    width: 8%; margin-top: 6px;
+}
